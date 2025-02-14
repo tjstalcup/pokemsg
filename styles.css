@@ -140,3 +140,7 @@ input#poke-submit {
     color: white;
     border: 0;
 }
+input#poke-give-answer {
+    background-color: #93e9be;
+    border: 0;
+}
