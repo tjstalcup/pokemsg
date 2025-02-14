@@ -1,0 +1,115 @@
+ul.pokecards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    border: 10px solid black;
+    justify-content: center;
+}
+
+li.pokecard {
+    background-image: url("/images/a.png");
+    height: 342px;
+    min-width: 245px;
+    margin: 0 5px;
+}
+
+li.pokecard-a {
+    background-image: url("/images/a.png");
+}
+/* b-z */
+li.pokecard-b {
+    background-image: url("/images/b.png");
+}
+li.pokecard-c {
+    background-image: url("/images/c.png");
+}
+li.pokecard-d {
+    background-image: url("/images/d.png");
+}
+li.pokecard-e {
+    background-image: url("/images/e.png");
+}
+li.pokecard-f {
+    background-image: url("/images/f.png");
+}
+li.pokecard-g {
+    background-image: url("/images/g.png");
+}
+li.pokecard-h {
+    background-image: url("/images/h.png");
+}
+li.pokecard-i {
+    background-image: url("/images/i.png");
+}
+li.pokecard-j {
+    background-image: url("/images/j.png");
+}
+li.pokecard-k {
+    background-image: url("/images/k.png");
+}
+li.pokecard-l {
+    background-image: url("/images/l.png");
+}
+li.pokecard-m {
+    background-image: url("/images/m.png");
+}
+li.pokecard-n {
+    background-image: url("/images/n.png");
+}
+li.pokecard-o {
+    background-image: url("/images/o.png");
+}
+li.pokecard-p {
+    background-image: url("/images/p.png");
+}
+li.pokecard-q {
+    background-image: url("/images/q.png");
+}
+li.pokecard-r {
+    background-image: url("/images/r.png");
+}
+li.pokecard-s {
+    background-image: url("/images/s.png");
+}
+li.pokecard-t {
+    background-image: url("/images/t.png");
+}
+li.pokecard-u {
+    background-image: url("/images/u.png");
+}
+li.pokecard-v {
+    background-image: url("/images/v.png");
+}
+li.pokecard-w {
+    background-image: url("/images/w.png");
+}
+li.pokecard-x {
+    background-image: url("/images/x.png");
+}
+li.pokecard-y {
+    background-image: url("/images/y.png");
+}
+li.pokecard-z {
+    background-image: url("/images/z.png");
+}
+
+.luvdisc {
+   position: absolute;
+   top: 0;
+   left: -125px;
+   width: 100px;
+   height: 100px;
+   animation-name: move-across;
+   animation-timing-function: linear;
+}
+
+@keyframes move-across {
+   from {
+       transform: translateX(-100px);
+   }
+   to {
+       transform: translateX(100vw);
+   }
+}

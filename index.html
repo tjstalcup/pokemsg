@@ -3,18 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
         <title>PokeMsg</title>
     </head>
     <body>
         <h1>PokeMsg</h1>
         <h2>Search by National Dex Number</h2>
-        <input type="text" placeholder="000" id="poke-search" />
-        <ul class="pokecards">
-            <li class="pokecard"></li>
-            <li class="pokecard"></li>
-            <li class="pokecard"></li>
-            <li class="pokecard"></li>
-            <li class="pokecard"></li>
-        </ul>
+        <form class="search">
+            <input type="text" placeholder="000" id="poke-search" />
+            <input type="submit" value="Search" id="poke-submit" />
+            <input type="button" value="Clear Results" id="poke-clear" />
+        </form>
+        <ul class="pokecards"></ul>
+        <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
     </body>
 </html>
