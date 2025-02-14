@@ -75,11 +75,24 @@ $(() => {
     })
 
     $("#poke-give-answer").click(() => {
+        $(".pokecards").empty()
+        result = []
         winningCombos[0].forEach(element => {
             const html = `<li class="pokecard pokecard-${pokemon[element]}"></li>`
             $(".pokecards").append(html)
         })
         showLuvDisc()
+    })
+
+    $("#poke-sort").click(() => {
+        $(".pokecards").empty()
+        result = []
+        Object.values(pokemon)
+            .sort()
+            .forEach(element => {
+                const html = `<li class="pokecard pokecard-${element}"></li>`
+                $(".pokecards").append(html)
+            })
     })
 })
 
