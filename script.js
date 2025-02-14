@@ -62,34 +62,7 @@ $(() => {
         if (result.length === 13) {
             for (let i = 0; i < winningCombos.length; i++) {
                 if (result.toString() === winningCombos[i].toString()) {
-                    const numberOfPNGs = 200
-                    const imageUrl = "/images/luvdisc-right.png" // Replace with your transparent PNG URL
-
-                    for (let i = 0; i < numberOfPNGs; i++) {
-                        const img = document.createElement("img")
-                        img.src = imageUrl
-                        img.className = "luvdisc"
-
-                        // Set random top position between 0 and window height
-                        img.style.top = `${
-                            Math.random() * window.innerHeight
-                        }px`
-
-                        // Set random animation duration between 5 and 15 seconds
-                        img.style.animationDuration = `${
-                            5 + Math.random() * 5
-                        }s`
-
-                        // Set random size between 50px and 150px
-                        const size = 50 + Math.random() * 100
-                        img.style.width = `${size}px`
-                        img.style.height = `${size}px`
-
-                        // Optional: Vary opacity for more visual interest
-                        img.style.opacity = `${0.5 + Math.random() * 0.5}`
-
-                        document.body.appendChild(img)
-                    }
+                    showLuvDisc()
                 }
             }
         }
@@ -100,4 +73,39 @@ $(() => {
         $(".pokecards").empty()
         result = []
     })
+
+    $("#poke-give-answer").click(() => {
+        winningCombos[0].forEach(element => {
+            const html = `<li class="pokecard pokecard-${pokemon[element]}"></li>`
+            $(".pokecards").append(html)
+        })
+        showLuvDisc()
+    })
 })
+
+function showLuvDisc() {
+    const numberOfPNGs = 200
+    const imageUrl = "images/luvdisc-right.png" // Replace with your transparent PNG URL
+
+    for (let i = 0; i < numberOfPNGs; i++) {
+        const img = document.createElement("img")
+        img.src = imageUrl
+        img.className = "luvdisc"
+
+        // Set random top position between 0 and window height
+        img.style.top = `${Math.random() * window.innerHeight}px`
+
+        // Set random animation duration between 5 and 15 seconds
+        img.style.animationDuration = `${5 + Math.random() * 5}s`
+
+        // Set random size between 50px and 150px
+        const size = 50 + Math.random() * 100
+        img.style.width = `${size}px`
+        img.style.height = `${size}px`
+
+        // Optional: Vary opacity for more visual interest
+        img.style.opacity = `${0.5 + Math.random() * 0.5}`
+
+        document.body.appendChild(img)
+    }
+}
