@@ -148,3 +148,29 @@ body {
     background-color: black;
     color: white;
 }
+
+@media screen and (max-width: 600px) {
+    li.pokecard {
+        min-width: 145px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 210px;
+        margin: 5px 10px;
+    }
+    input#poke-search {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    input#poke-submit {
+        width: 90%;
+        margin: 0 auto 10px;
+    }
+
+    input#poke-clear,
+    input#poke-sort,
+    input#poke-give-answer {
+        width: 28%;
+        font-size: 1rem;
+    }
+}
